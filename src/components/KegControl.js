@@ -2,6 +2,7 @@ import React from 'react';
 import KegList from './KegList';
 import KegDetails from './KegDetails';
 import NewKegForm from './NewKegForm';
+import {connect} from 'react-redux';
 
 class KegControl extends React.Component{
 

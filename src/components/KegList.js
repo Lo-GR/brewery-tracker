@@ -27,7 +27,9 @@ function KegList(props){
 }
 
 KegList.propTypes = {
-  masterKegList: PropTypes.object
+  masterKegList: PropTypes.object,
+  onKegSelection: PropTypes.func,
+  onPints: PropTypes.func
 }
 const mapStateToProps = state =>{
   return {

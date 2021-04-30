@@ -28,4 +28,7 @@ describe('help queue actions', () =>{
       type: c.TOGGLE_FORM
     })
   })
+  // it('selectKeg should create SELECT_KEG action', ()=>{
+  //   expect(actions.selectKeg())
+  // })
 })

@@ -23,4 +23,9 @@ describe('help queue actions', () =>{
       volume: 5
     })
   })
+  it('toggle should create TOGGLE_FORM action', ()=>{
+    expect(actions.toggle()).toEqual({
+      type: c.TOGGLE_FORM
+    })
+  })
 })

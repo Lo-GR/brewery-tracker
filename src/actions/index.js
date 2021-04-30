@@ -13,3 +13,7 @@ export const addKeg = kegData => {
     volume: volume
   };
 }
+
+export const toggle = () =>{
+  
+}

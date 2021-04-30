@@ -19,5 +19,8 @@ export const toggle = () =>{
 }
 
 export const selectKeg = (id) => {
-  // return {type: }
+  return {
+    type: c.SELECT_KEG,
+    id: id
+  }
 }

@@ -1,5 +1,5 @@
 import kegListReducer from "../../reducers/keg-list-reducer";
-import * as c from "../actions/ActionTypes";
+import * as c from "../../actions/ActionTypes";
 
 describe('kegListReducer', () => {
   let action;
@@ -18,7 +18,23 @@ describe('kegListReducer', () => {
   test('Should successfully add new keg data to masterKegList', ()=>{
     const {name, id, flavor, alc, price, brand} = kegData;
     action = {
-      
-    }
+      type: c.ADD_KEG,
+      name: name,
+      id: id,
+      flavor: flavor,
+      alc: alc,
+      price: price,
+      brand: brand
+    };
+    expect(kegListReducer({}, action)).toEqual({
+      [id]: {
+        name: name,
+        id: id,
+        flavor: flavor,
+        alc: alc,
+        price: price,
+        brand: brand
+      }
+    })
   })
 });

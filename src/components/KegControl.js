@@ -3,6 +3,7 @@ import KegList from './KegList';
 import KegDetails from './KegDetails';
 import NewKegForm from './NewKegForm';
 import * as c from "../actions/ActionTypes";
+import * as a from "../actions/index";
 import {connect} from 'react-redux';
 
 class KegControl extends React.Component{
@@ -44,10 +45,10 @@ class KegControl extends React.Component{
     document.getElementById(id).style.width= keg.volume + "px";
   }
   handleAddingNewKeg = (newKeg) =>{
-    const newKegList = this.state.masterKegList.concat(newKeg);
-    this.setState({
-      masterKegList: newKegList,
-      formVisible: false})
+    const { dispatch } = this.props;
+    const action = a.addKeg(newKeg);
+    dispatch(action);
+    this.setState({formVisible: false})
   }
   render(){
     let buttonText = "Return to Keg List";

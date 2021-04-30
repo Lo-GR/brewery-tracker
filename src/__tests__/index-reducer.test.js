@@ -1,6 +1,7 @@
 import rootReducer from "../reducers/index";
 import formVisibleReducer from '../reducers/form-visible-reducer';
 import kegListReducer from '../reducers/keg-list-reducer';
+import selectedKegReducer from '../reducers/selected-keg';
 import * as c from "../actions/ActionTypes";
 import * as a from "../actions/index";
 import { createStore } from 'redux';
@@ -14,7 +15,8 @@ describe("rootReducer", ()=>{
   test("should return default state if no action is passed", ()=>{
     expect(rootReducer({}, {type: null})).toEqual({
       formVisible: false,
-      masterKegList: {}
+      masterKegList: {},
+      selectedKeg: ""
     });
   });
   test("check initial state of kegListReducer through root", ()=>{
@@ -41,5 +43,8 @@ test('check that add keg works through root', ()=>{
     action = a.toggle();
     store.dispatch(action);
     expect(store.getState().formVisible).toEqual(formVisibleReducer(undefined, action));
+  })
+  test("check initial state of kegListReducer through root", ()=>{
+    expect(store.getState().selectedKeg).toEqual(selectedKegReducer(undefined, { type: null}));
   })
 })

@@ -1,4 +1,4 @@
-# <div align="center"> **Tap-Room Website Mockup** </div>
+# <div align="center"> **Brewery** </div>
 ### This is a REACT programmed web application used to add and track volume of kegs.
 
  ### _Contributor(s) and Contact Info_

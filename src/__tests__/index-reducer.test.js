@@ -1,9 +1,10 @@
 import rootReducer from "../reducers/index";
-import formVisibleReducer from '../reducers/form-visible-reducer';
-import kegListReducer from '../reducers/keg-list-reducer';
-import { createStore } from 'redux';
+// import formVisibleReducer from '../reducers/form-visible-reducer';
+// import kegListReducer from '../reducers/keg-list-reducer';
+// import { createStore } from 'redux';
 
 
+// let store = createStore(rootReducer);
 
 describe("rootReducer", ()=>{
   

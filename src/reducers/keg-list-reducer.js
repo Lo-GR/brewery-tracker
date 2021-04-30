@@ -15,6 +15,6 @@ export default (state = {}, action) => {
           volume: volume
         }
       })
+    default: return state;
   }
-  return state;
 }

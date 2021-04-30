@@ -18,6 +18,6 @@ export const toggle = () =>{
   return {type: c.TOGGLE_FORM }
 }
 
-export const selectKeg = () => {
-
+export const selectKeg = (id) => {
+  // return {type: }
 }

@@ -8,7 +8,8 @@ describe('help queue actions', () =>{
       flavor: "IPA",
       alc: 5.5,
       price: 4.4,
-      brand: "GreenWay Beer"
+      brand: "GreenWay Beer",
+      volume: 5
     }
   it('addKeg should create ADD_KEG action', ()=>{
     expect(actions.addKeg(kegData)).toEqual({
@@ -18,7 +19,8 @@ describe('help queue actions', () =>{
       flavor: "IPA",
       alc: 5.5,
       price: 4.4,
-      brand: "GreenWay Beer"
+      brand: "GreenWay Beer",
+      volume: 5
     })
   })
 })

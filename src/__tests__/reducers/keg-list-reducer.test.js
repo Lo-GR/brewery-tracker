@@ -24,7 +24,8 @@ describe('kegListReducer', () => {
       flavor: flavor,
       alc: alc,
       price: price,
-      brand: brand
+      brand: brand,
+      volume: 5
     };
     expect(kegListReducer({}, action)).toEqual({
       [id]: {
@@ -33,7 +34,8 @@ describe('kegListReducer', () => {
         flavor: flavor,
         alc: alc,
         price: price,
-        brand: brand
+        brand: brand,
+        volume: 5
       }
     })
   })

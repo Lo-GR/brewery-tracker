@@ -2,6 +2,7 @@ import rootReducer from "../reducers/index";
 import formVisibleReducer from '../reducers/form-visible-reducer';
 import kegListReducer from '../reducers/keg-list-reducer';
 import * as c from "../actions/ActionTypes";
+import * as a from "../actions/index";
 import { createStore } from 'redux';
 
 
@@ -35,5 +36,10 @@ test('check that add keg works through root', ()=>{
   };
   store.dispatch(action);
   expect(store.getState().masterKegList).toEqual(kegListReducer({}, action));
+  })
+  test('check that toggle form works through root', ()=>{
+    action = a.toggle();
+    store.dispatch(action);
+    expect(store.getState().formVisible).toEqual(formVisibleReducer(undefined, action));
   })
 })

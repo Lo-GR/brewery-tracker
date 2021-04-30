@@ -17,4 +17,7 @@ describe("rootReducer", ()=>{
   test("check initial state of kegListReducer through root", ()=>{
     expect(store.getState().masterKegList).toEqual(kegListReducer(undefined, { type: null}));
   })
+  test("check that initial state of formvislbe matches root", ()=>{
+    expect(store.getState().formVisible).toEqual(formVisibleReducer(undefined, {type: null}));
+  })
 })

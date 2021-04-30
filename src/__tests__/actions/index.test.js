@@ -28,7 +28,9 @@ describe('help queue actions', () =>{
       type: c.TOGGLE_FORM
     })
   })
-  // it('selectKeg should create SELECT_KEG action', ()=>{
-  //   expect(actions.selectKeg())
-  // })
+  it('selectKeg should create SELECT_KEG action', ()=>{
+    expect(actions.selectKeg()).toEqual({
+      type: c.SELECT_KEG
+    })
+  })
 })

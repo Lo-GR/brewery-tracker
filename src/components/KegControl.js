@@ -10,11 +10,8 @@ class KegControl extends React.Component{
 
   constructor(props){
     super(props);
-    this.state = {
-      selectedKeg: null,
-      formVisible: false
-    }
   }
+  
   handleClick = () => {
     if (this.state.selectedKeg != null){
       this.setState({
@@ -71,11 +68,15 @@ class KegControl extends React.Component{
 }
 
 KegControl.propTypes = {
-  masterKegList: PropTypes.object
+  masterKegList: PropTypes.object,
+  formVisible: PropTypes.bool,
+  selectedKeg: PropTypes.string
 }
 const mapStateToProps = state =>{
   return {
-    masterKegList: state
+    formVisible: state.formVisible,
+    masterKegList: state.masterKegList,
+    selectedKeg: state.selectedKeg
   }
 }
 KegControl = connect(mapStateToProps)(KegControl);

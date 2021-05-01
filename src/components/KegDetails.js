@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import {connect} from 'react-redux';
 
 
 function KegDetails(props){
-  const {keg} = props;
-
+  const keg = props.masterKegList[props.kegID]
   return (
     <>
       <h3>Keg Details</h3>
@@ -19,7 +19,17 @@ function KegDetails(props){
 }
 
 KegDetails.propTypes = {
-  keg: PropTypes.string
+  kegID: PropTypes.string,
+  masterKegList: PropTypes.object,
+  formVisible: PropTypes.bool,
+  selectedKeg: PropTypes.string,
 }
-
+const mapStateToProps = state =>{
+  return {
+    formVisible: state.formVisible,
+    masterKegList: state.masterKegList,
+    selectedKeg: state.selectedKeg
+  }
+}
+KegDetails = connect(mapStateToProps)(KegDetails);
 export default KegDetails;

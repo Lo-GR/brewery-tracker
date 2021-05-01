@@ -36,8 +36,9 @@ class KegControl extends React.Component{
   }
   handleAddingNewKeg = (newKeg) =>{
     const action = a.addKeg(newKeg);
+    console.log(newKeg);
     const { dispatch } = this.props;
-    if (!newKeg === undefined){
+    if (newKeg.name !== ""){
       dispatch(action);
     }
     dispatch(a.toggle());

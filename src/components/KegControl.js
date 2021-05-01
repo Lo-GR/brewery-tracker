@@ -8,12 +8,8 @@ import {connect} from 'react-redux';
 
 class KegControl extends React.Component{
 
-  constructor(props){
-    super(props);
-  }
-
   handleClick = () => {
-    if (this.props.selectedKeg != ""){
+    if (this.props.selectedKeg !== ""){
       const { dispatch } = this.props;
       dispatch(a.selectKeg(""))
     }else{
@@ -45,7 +41,7 @@ class KegControl extends React.Component{
   render() {
     let buttonText = "Return to Keg List";
     let currentlyVisibleState = null;
-    if(this.props.selectedKeg != ""){
+    if(this.props.selectedKeg !== ""){
       currentlyVisibleState = <KegDetails kegID = {this.props.selectedKeg} />
     } else if (this.props.formVisible){
       currentlyVisibleState = <NewKegForm onNewKeg={this.handleAddingNewKeg} />

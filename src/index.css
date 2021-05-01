@@ -24,7 +24,7 @@ code {
 .remainder{
   width: 124px;
   height: 40px;
-  background-color: gold;
+  background-color: #FFD60F;
   text-align: center;
 }
 .kegs{
@@ -35,4 +35,23 @@ code {
   object-fit: none;
   object-position: center center;
   width: 100%;
+}
+button{
+  background-color: #053225; 
+  border: none;
+  color: white;
+  padding: 5px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  transition-duration: .1s;
+  margin: 3px;
+}
+
+button:hover {
+  background-color: #60A561; 
+  color: rgb(2, 2, 2);
+  
 }

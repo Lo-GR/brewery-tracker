@@ -25,17 +25,21 @@ class KegControl extends React.Component{
   handlePints = (id) =>{
     const { dispatch } = this.props;
     const kegToEdit = this.props.masterKegList[id];
-    const editedKeg = {
-      ...kegToEdit,
-      volume: (kegToEdit.volume)-1
-    };
-    dispatch(a.addKeg(editedKeg));
-    document.getElementById(id).style.width= editedKeg.volume + "px";
+    if(kegToEdit.volume > 0){
+      const editedKeg = {
+        ...kegToEdit,
+        volume: (kegToEdit.volume)-1
+      };
+      dispatch(a.addKeg(editedKeg));
+      document.getElementById(id).style.width= editedKeg.volume + "px";
+    }
   }
   handleAddingNewKeg = (newKeg) =>{
     const action = a.addKeg(newKeg);
     const { dispatch } = this.props;
-    dispatch(action);
+    if (!newKeg === undefined){
+      dispatch(action);
+    }
     dispatch(a.toggle());
   }
   render() {

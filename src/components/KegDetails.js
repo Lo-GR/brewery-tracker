@@ -19,7 +19,7 @@ function KegDetails(props){
 }
 
 KegDetails.propTypes = {
-  keg: PropTypes.object
+  keg: PropTypes.string
 }
 
 export default KegDetails;

@@ -28,12 +28,16 @@ function KegList(props){
 
 KegList.propTypes = {
   masterKegList: PropTypes.object,
+  formVisible: PropTypes.bool,
+  selectedKeg: PropTypes.string,
   onKegSelection: PropTypes.func,
   onPints: PropTypes.func
 }
 const mapStateToProps = state =>{
   return {
-    masterKegList: state
+    formVisible: state.formVisible,
+    masterKegList: state.masterKegList,
+    selectedKeg: state.selectedKeg
   }
 }
 KegList = connect(mapStateToProps)(KegList);

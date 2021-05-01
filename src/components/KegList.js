@@ -1,6 +1,7 @@
 import React from "react";
 import Keg from "./Keg";
 import PropTypes from "prop-types";
+import { v4 } from 'uuid';
 import {connect} from 'react-redux';
 
 function KegList(props){
@@ -8,8 +9,7 @@ function KegList(props){
   return (
     <>
       {Object.values(props.masterKegList).map((keg)=>
-      <>
-        <div className="kegs">
+        <div key={v4()} className="kegs">
           <Keg 
           whenKegClicked={props.onKegSelection}
           name = {keg.name}
@@ -21,7 +21,6 @@ function KegList(props){
           volume={keg.volume}/>
           <button onClick={()=> props.onPints(keg.id)}>Buy Pint</button>
         </div>
-      </>
       )}
     </>
   )

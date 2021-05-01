@@ -22,7 +22,7 @@ Keg.propTypes = {
   alc: PropTypes.string,
   price: PropTypes.string,
   brand: PropTypes.string,
-  volume: PropTypes.string
+  volume: PropTypes.number
   
 }
 export default Keg;

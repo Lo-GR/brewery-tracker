@@ -130,7 +130,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ---
 
 ## _Known Bugs_ 🩹
-* The volume bar on the keg list needs to "reset" when leaving and coming back to the page.
+* The volume bar has broken from last build. To Research
 
 ---
 

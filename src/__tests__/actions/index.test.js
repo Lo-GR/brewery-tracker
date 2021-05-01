@@ -30,7 +30,7 @@ describe('help queue actions', () =>{
   })
   it('selectKeg should create SELECT_KEG action', ()=>{
     expect(actions.selectKeg(1)).toEqual({
-      type: c.SELECT_KEG,
+      type: "SELECT_KEG",
       id: 1
     })
   })

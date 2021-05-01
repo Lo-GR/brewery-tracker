@@ -7,6 +7,6 @@ describe("selectedKeg", ()=>{
     expect(selectedKeg({}, {type: null})).toEqual({});
   });
   test('should change selected keg to id passed in', ()=>{
-    expect(selectedKeg(a.selectKeg(1))).toEqual(1);
+    expect(selectedKeg("", a.selectKeg(1))).toEqual(1);
   })
 })

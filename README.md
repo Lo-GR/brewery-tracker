@@ -1,8 +1,8 @@
 # <div align="center"> **Brewery** </div>
-### This is a REACT programmed web application used to add and track volume of kegs.
+### This is a REACT and REDUX programmed web application used to add and track volume of kegs.
 
  ### _Contributor(s) and Contact Info_
-> Logan Roth diamondintheroth@gmail.com - [GitHub(Lo-GR)](https://github.com/Lo-GR)
+> Logan Roth logan.roth.g@gmail.com - [GitHub(Lo-GR)](https://github.com/Lo-GR)
 
 [//]: <> (Readme- Template by Logan Roth, please do not remove without giving proper contributions.)
 
@@ -17,6 +17,7 @@
 * **webpack 4.39.3**
 * **eslint 6.3.0**
 * **UUID**
+* **Redux/ReactRedux**
 
 ## _Concepts Used_ 🧠
 
@@ -24,11 +25,12 @@
 * **[Thinking in react](https://reactjs.org/docs/thinking-in-react.html)**
 * **Unidirectional Data Flow**
 * **State Management**
+* **Redux Store Management**
 
 ---
 
 ## _Description_ 📃
-This project is a react application designed and built during Epicodus. It Allows you to add Kegs of Beer and track brand, alcohol content, flavor, price and current volume in pints. You can then decrement the volume per pint.
+This project is a react application designed and built during Epicodus. It Allows you to add Kegs of Beer and track brand, alcohol content, flavor, price and current volume in pints. You can then decrement the volume per pint. This was built from the ground up in react and then refactored to allow redux to handle state.
 
 ---
 

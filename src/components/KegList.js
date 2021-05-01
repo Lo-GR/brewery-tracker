@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import {connect} from 'react-redux';
 
 function KegList(props){
+  
   return (
     <>
       {Object.values(props.masterKegList).map((keg)=>

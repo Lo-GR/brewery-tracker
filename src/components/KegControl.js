@@ -31,7 +31,8 @@ class KegControl extends React.Component{
         volume: (kegToEdit.volume)-1
       };
       dispatch(a.addKeg(editedKeg));
-      document.getElementById(id).style.width= editedKeg.volume + "px";
+      // document.getElementById(id).style.background=editedKeg.volume + "px";
+      // the above code is commented out until I can discover the reason it's not working
     }
   }
   handleAddingNewKeg = (newKeg) =>{

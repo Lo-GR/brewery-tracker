@@ -5,9 +5,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #230C0F;
+  background-color: #301619;
 }
-
+input{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 2px;
+}
+.remainder{
+  width: 124px;
+  height: 40px;
+  background-color: #FFD60F;
+  border-radius: 10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.remainder p{
+  font-size: x-large;
+  color: #053225;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -26,26 +45,23 @@ h3{
   display: flex; 
   width: 100%;
 }
-
-.remainder{
-  width: 124px;
-  height: 40px;
-  background-color: #FFD60F;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+.topper{
+  height: 10px;
+  width: 100%;
+  background-color: black;
 }
 .kegs{
   margin-left: 30px;
   margin-right: 30px;
   margin-bottom: 15px;
   background-color: #6290C3;
+  border: black 2px groove;
+  border-radius: 10px;
   padding: 5px;
   width: auto;
   text-align: center;
 }
 @media only screen and (max-width: 800px) {
-  /* For mobile phones: */
   .kegs {
     width: 80%;
   }
@@ -53,12 +69,15 @@ h3{
     object-fit: contain;
     object-position: unset;
   }
+  button{
+    width: 50%;
+  }
 }
 @media only screen and (min-width: 801px) {
   .kegList {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 200px);
+    grid-template-rows: repeat(2, 220px);
     grid-gap: 30px;
   }
 }
@@ -69,7 +88,7 @@ h3{
 }
 button{
   background-color: #60A561; 
-  border: none;
+  border: black 2px groove;
   color: rgb(2, 2, 2);
   padding: 5px 12px;
   text-align: center;

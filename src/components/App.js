@@ -8,8 +8,9 @@ import { v4 } from 'uuid';
 function App(){
     return (
       <>
+        <div className="topper"></div>
         <Header key={v4()}/>
-        <h3>Welcome to the Brewery!</h3>
+        <h3 className="title">Welcome to the Brewery!</h3>
         <KegControl key={v4()}/>
       </>
     )

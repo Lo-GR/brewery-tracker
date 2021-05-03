@@ -11,7 +11,7 @@
 ## _Technologies Used_ ⚙
 
 * **HTML5/CSS3**
-* **REACT 3.2.0**
+* **React 17.0.2**
 * **JavaScript ES6**
 * **Node Package Manager 6.14.9**
 * **webpack 4.39.3**
